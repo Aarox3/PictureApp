@@ -17,8 +17,11 @@ namespace PictureApp
 
         public Main()
         {
-
+          
             InitializeComponent();
+
+            if (!File.Exists(imagePath))
+                File.Create(imagePath);
 
             ReadFilePath();
 
@@ -57,7 +60,6 @@ namespace PictureApp
             {
                 MessageBox.Show("Błąd!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
 
         }
 
